@@ -8,8 +8,13 @@
     description: <%=@todo.description%>
 </p>
 
+<%=link_to "Edit this todo", edit_todo_path(@todo)%> <br>
+
+<br><%=link_to "Back to the listing todos",todos_path%>
+
 <% flash.each do |name,msg|%>
     <ul>
     <li><%=msg%></li>
     </ul>
     <%end%>
+
