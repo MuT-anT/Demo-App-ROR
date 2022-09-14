@@ -1,0 +1,15 @@
+<h1>Displaying the Todo</h1>
+
+<p>
+    name: <%= @todo.name %>
+</p>
+
+<p>
+    description: <%=@todo.description%>
+</p>
+
+<% flash.each do |name,msg|%>
+    <ul>
+    <li><%=msg%></li>
+    </ul>
+    <%end%>

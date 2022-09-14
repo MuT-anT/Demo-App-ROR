@@ -1,0 +1,27 @@
+<h1>This is the new page </h1>
+
+<% if @todo.errors.any? %>
+    <h2>The following errors occured </h2>
+    <ul>
+    <% @todo.errors.full_messages.each do |m| %>
+    <li><%= m%></li>
+    <%end%>
+    </ul>
+<% end %>
+
+<%=form_for @todo do |f|%>
+    <p>
+    <%= f.label :name%> <br>
+    <%= f.text_field :name%>
+    </p>
+
+    <p>
+    <%= f.label :description%> <br>
+    <%= f.text_area :description , size: "28x3"%>
+    </p>
+
+    <p>
+    <%= f.submit%> <br>
+    </p>
+
+<% end %> 
